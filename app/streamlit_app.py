@@ -70,9 +70,9 @@ def get_available_datasets() -> dict:
     processed_dir = datasets_dir / "processed"
     
     datasets = {
-        "Raw Dataset": datasets_dir / "sms_spam.csv",
-        "Processed Dataset": processed_dir / "sms_spam_processed.csv"
+        "SMS Spam Dataset": processed_dir / "sms_spam_processed.csv"
     }
+    # Only return mappings for existing files
     return {k: v for k, v in datasets.items() if v.exists()}
 
 
